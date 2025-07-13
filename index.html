@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sakthi Murugan | Welcome</title>
+  <link rel="stylesheet" href="index.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+</head>
+<body>
+ <video autoplay muted loop playsinline class="background-video">
+    <source src="assets/space3.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">Sakthi Murugan</div>
+    <nav class="nav-links">
+      <a href="about.html">About</a>
+      <a href="project.html">Projects</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://www.instagram.com/sakthi__47" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.linkedin.com/in/sakthi-murugan-d-90a994310?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <a href="https://www.youtube.com/@vandu9521" target="_blank"><i class="fab fa-youtube"></i></a>
+    </nav>
+  </header>
+
+  <!-- Main Section -->
+<main class="hero">
+  <div class="hero-text">
+   <div class="Myname">
+    <h1>Sakthi Murugan</h1>
+   </div> 
+    <p>Design. <span class="highlight">Develop.</span> Deploy. <span class="highlight">Repeat</span></p>
+    <a href="resume.html" class="btn">View Resume</a>
+  </div>
+  <div class="hero-image" id="image-container">
+    <img src="myimage.png" alt="Your Image" id="animated-img" />
+  </div>
+</main>
+
+  <!-- JS to slow down video -->
+  <script>
+    const bgVideo = document.getElementById('bg-video');
+    bgVideo.playbackRate = 0.5;
+  </script>
+
+  <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: 'Poppins', sans-serif;
+  height: 100%;
+  overflow-x: hidden;
+  color: #ffffff;
+  background: #00000000;
+}
+
+/* 🎥 Background Video */
+.background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+/* 🕶️ Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0);
+  z-index: -1;
+}
+
+/* 📦 About Section */
+.about-section {
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.content-box {
+  max-width: 900px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 40px;
+  border-radius: 20px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.15);
+  animation: fadeInUp 1.2s ease-out;
+}
+
+/* 🧊 Title */
+.animate-title {
+  font-size: 2.8rem;
+  color: #00eaff;
+  margin-bottom: 20px;
+  animation: slideIn 1s ease-out forwards;
+}
+
+/* ✨ Text */
+.animate-text {
+  font-size: 1rem;
+  margin-bottom: 40px;
+  line-height: 1.8;
+  color: #dddddd;
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* 💡 Info Cards */
+.info-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.info-card {
+  flex: 1 1 260px;
+  padding: 20px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInCard 1.6s ease-out forwards;
+}
+
+.info-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(0, 255, 255, 0.5);
+}
+
+.info-card h3 {
+  font-size: 1.3rem;
+  color: #00eaff;
+  margin-bottom: 10px;
+}
+
+.info-card p {
+  font-size: 0.95rem;
+  color: #ffffff;
+}
+
+/* 🎞️ Animations */
+@keyframes slideIn {
+  0% { opacity: 0; transform: translateY(-30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  0% { transform: translateY(50px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeInCard {
+  0% { opacity: 0; transform: scale(0.95); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+/* 📱 Responsive */
+@media screen and (max-width: 768px) {
+  .animate-title {
+    font-size: 2rem;
+  }
+  .info-cards {
+    flex-direction: column;
+  }
+}
